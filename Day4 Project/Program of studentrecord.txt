@@ -1,0 +1,38 @@
+pragma solidity ^0.4.17 < 0.6.12;
+
+contract ReportCard{
+    string public Name;
+    string public RollNo;
+    string public Stream;
+    uint public Maths;
+    uint public Physics;
+    uint public Chemistry;
+    uint public Computerscience;
+    string public status;
+    
+    function ReportCard(string newName,string newRollNo,string StudentStream,uint newMaths,uint newPhysics,uint newChemistry,uint newComputerscience,string CurrentStatus)public{
+    Name = newName;
+    RollNo = newRollNo;
+    Stream = StudentStream;
+    Maths = newMaths;
+    Physics = newPhysics;
+    Chemistry = newChemistry;
+    Computerscience = newComputerscience;
+    status = CurrentStatus;
+    }
+    
+    function setStudentDetails(string newName,string newRollNo,string StudentStream,uint newMaths,uint newPhysics,uint newChemistry,uint newComputerscience,string CurrentStatus)public{
+    Name = newName;
+    RollNo = newRollNo;
+    Stream = StudentStream;
+    Maths = newMaths;
+    Physics = newPhysics;
+    Chemistry = newChemistry;
+    Computerscience = newComputerscience;
+    status = CurrentStatus;
+    }
+
+    function getStudentDetails() public view returns(string,string,string,uint,uint,uint,uint,string){
+        return(Name,RollNo,Stream,Maths,Physics,Chemistry,Computerscience,status);
+    }
+}
